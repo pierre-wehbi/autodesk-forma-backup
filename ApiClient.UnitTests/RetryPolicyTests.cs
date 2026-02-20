@@ -180,10 +180,10 @@ public class RetryPolicyTests
         exception.Data["RetryAfter"] = "invalid string"; // Invalid data type
         
         // Act
-        Exception caughtException = null;
+        Exception? caughtException = null;
         try
         {
-            await retryPolicy.ExecuteAsync(async () =>
+            await retryPolicy.ExecuteAsync(() =>
             {
                 attempt++;
                 throw exception;
@@ -272,10 +272,10 @@ public class RetryPolicyTests
         var exception = new HttpRequestException("Forbidden", null, HttpStatusCode.Forbidden);
         
         // Act
-        Exception caughtException = null;
+        Exception? caughtException = null;
         try
         {
-            await retryPolicy.ExecuteAsync(async () =>
+            await retryPolicy.ExecuteAsync(() =>
             {
                 attempt++;
                 throw exception;
