@@ -153,13 +153,13 @@ public class ApiClientUnitTests
             {
                 RequestUri = new Uri("https://developer.api.autodesk.com/authentication/v2/token"),
                 Response =
-                    await new StreamReader(@"ExampleRestApiResponses\AuthenticateResponse.json").ReadToEndAsync(),
+                    await new StreamReader(Path.Combine("ExampleRestApiResponses", "AuthenticateResponse.json")).ReadToEndAsync(),
                 StatusCode = HttpStatusCode.OK
             },
             new()
             {
                 RequestUri = new Uri($"https://developer.api.autodesk.com/project/v1/hubs/b.{accountId}/projects"),
-                Response = await new StreamReader(@"ExampleRestApiResponses\ProjectsResponse.json").ReadToEndAsync(),
+                Response = await new StreamReader(Path.Combine("ExampleRestApiResponses", "ProjectsResponse.json")).ReadToEndAsync(),
                 StatusCode = HttpStatusCode.OK
             }
         };
@@ -284,13 +284,13 @@ public class ApiClientUnitTests
             {
                 RequestUri = new Uri("https://developer.api.autodesk.com/authentication/v2/token"),
                 Response =
-                    await new StreamReader(@"ExampleRestApiResponses\AuthenticateResponse.json").ReadToEndAsync(),
+                    await new StreamReader(Path.Combine("ExampleRestApiResponses", "AuthenticateResponse.json")).ReadToEndAsync(),
                 StatusCode = HttpStatusCode.OK
             },
             new()
             {
                 RequestUri = new Uri($"https://developer.api.autodesk.com/project/v1/hubs/b.{accountId}/projects"),
-                Response = await new StreamReader(@"ExampleRestApiResponses\ProjectsResponse.json").ReadToEndAsync(),
+                Response = await new StreamReader(Path.Combine("ExampleRestApiResponses", "ProjectsResponse.json")).ReadToEndAsync(),
                 StatusCode = HttpStatusCode.OK
             }
         };
@@ -330,7 +330,7 @@ public class ApiClientUnitTests
             {
                 RequestUri = new Uri("https://developer.api.autodesk.com/authentication/v2/token"),
                 Response =
-                    await new StreamReader(@"ExampleRestApiResponses\AuthenticateResponse.json").ReadToEndAsync(),
+                    await new StreamReader(Path.Combine("ExampleRestApiResponses", "AuthenticateResponse.json")).ReadToEndAsync(),
                 StatusCode = HttpStatusCode.OK
             },
             new()
@@ -379,13 +379,13 @@ public class ApiClientUnitTests
             {
                 RequestUri = new Uri("https://developer.api.autodesk.com/authentication/v2/token"),
                 Response =
-                    await new StreamReader(@"ExampleRestApiResponses\AuthenticateResponse.json").ReadToEndAsync(),
+                    await new StreamReader(Path.Combine("ExampleRestApiResponses", "AuthenticateResponse.json")).ReadToEndAsync(),
                 StatusCode = HttpStatusCode.OK
             },
             new()
             {
                 RequestUri = new Uri($"https://developer.api.autodesk.com/project/v1/hubs/b.{accountId}/projects"),
-                Response = await new StreamReader(@"ExampleRestApiResponses\ProjectsResponseWithPagination.json")
+                Response = await new StreamReader(Path.Combine("ExampleRestApiResponses", "ProjectsResponseWithPagination.json"))
                     .ReadToEndAsync(),
                 StatusCode = HttpStatusCode.OK
             },
@@ -394,7 +394,7 @@ public class ApiClientUnitTests
                 RequestUri =
                     new Uri(
                         $"https://developer.api.autodesk.com/project/v1/hubs/b.{accountId}/projects?page%5Bnumber%5D=2&page%5Blimit%5D=2"),
-                Response = await new StreamReader(@"ExampleRestApiResponses\ProjectsResponse.json").ReadToEndAsync(),
+                Response = await new StreamReader(Path.Combine("ExampleRestApiResponses", "ProjectsResponse.json")).ReadToEndAsync(),
                 StatusCode = HttpStatusCode.OK
             }
         };
@@ -441,21 +441,21 @@ public class ApiClientUnitTests
             {
                 RequestUri = new Uri("https://developer.api.autodesk.com/authentication/v2/token"),
                 Response =
-                    await new StreamReader(@"ExampleRestApiResponses\AuthenticateResponse.json").ReadToEndAsync(),
+                    await new StreamReader(Path.Combine("ExampleRestApiResponses", "AuthenticateResponse.json")).ReadToEndAsync(),
                 StatusCode = HttpStatusCode.OK
             },
             new()
             {
                 RequestUri = new Uri(folderEndpoint),
                 Response =
-                    await new StreamReader(@"ExampleRestApiResponses\FolderResponse.json").ReadToEndAsync(),
+                    await new StreamReader(Path.Combine("ExampleRestApiResponses", "FolderResponse.json")).ReadToEndAsync(),
                 StatusCode = HttpStatusCode.OK
             },
             new()
             {
                 RequestUri = new Uri(folderContentsEndpoint),
                 Response =
-                    await new StreamReader(@"ExampleRestApiResponses\FolderContentsResponse.json").ReadToEndAsync(),
+                    await new StreamReader(Path.Combine("ExampleRestApiResponses", "FolderContentsResponse.json")).ReadToEndAsync(),
                 StatusCode = HttpStatusCode.OK
             }
         };
@@ -514,13 +514,13 @@ public class ApiClientUnitTests
             {
                 RequestUri = new Uri("https://developer.api.autodesk.com/authentication/v2/token"),
                 Response =
-                    await new StreamReader(@"ExampleRestApiResponses\AuthenticateResponse.json").ReadToEndAsync(),
+                    await new StreamReader(Path.Combine("ExampleRestApiResponses", "AuthenticateResponse.json")).ReadToEndAsync(),
                 StatusCode = HttpStatusCode.OK
             },
             new()
             {
                 RequestUri = new Uri(folderEndpoint),
-                Response = await new StreamReader(@"ExampleRestApiResponses\FolderResponse.json").ReadToEndAsync(),
+                Response = await new StreamReader(Path.Combine("ExampleRestApiResponses", "FolderResponse.json")).ReadToEndAsync(),
                 StatusCode = HttpStatusCode.OK
             }
         };
@@ -568,13 +568,13 @@ public class ApiClientUnitTests
             {
                 RequestUri = new Uri("https://developer.api.autodesk.com/authentication/v2/token"),
                 Response =
-                    await new StreamReader(@"ExampleRestApiResponses\AuthenticateResponse.json").ReadToEndAsync(),
+                    await new StreamReader(Path.Combine("ExampleRestApiResponses", "AuthenticateResponse.json")).ReadToEndAsync(),
                 StatusCode = HttpStatusCode.OK
             },
             new()
             {
                 RequestUri = new Uri(folderEndpoint),
-                Response = await new StreamReader(@"ExampleRestApiResponses\FolderResponseRootFolder.json")
+                Response = await new StreamReader(Path.Combine("ExampleRestApiResponses", "FolderResponseRootFolder.json"))
                     .ReadToEndAsync(),
                 StatusCode = HttpStatusCode.OK
             }
@@ -625,19 +625,19 @@ public class ApiClientUnitTests
             {
                 RequestUri = new Uri("https://developer.api.autodesk.com/authentication/v2/token"),
                 Response =
-                    await new StreamReader(@"ExampleRestApiResponses\AuthenticateResponse.json").ReadToEndAsync(),
+                    await new StreamReader(Path.Combine("ExampleRestApiResponses", "AuthenticateResponse.json")).ReadToEndAsync(),
                 StatusCode = HttpStatusCode.OK
             },
             new()
             {
                 RequestUri = new Uri(folderEndpoint),
-                Response = await new StreamReader(@"ExampleRestApiResponses\FolderResponse.json").ReadToEndAsync(),
+                Response = await new StreamReader(Path.Combine("ExampleRestApiResponses", "FolderResponse.json")).ReadToEndAsync(),
                 StatusCode = HttpStatusCode.OK
             },
             new()
             {
                 RequestUri = new Uri(folderContentsEndpoint),
-                Response = await new StreamReader(@"ExampleRestApiResponses\FolderContentsResponseWithPagination.json")
+                Response = await new StreamReader(Path.Combine("ExampleRestApiResponses", "FolderContentsResponseWithPagination.json"))
                     .ReadToEndAsync(),
                 StatusCode = HttpStatusCode.OK
             },
@@ -645,7 +645,7 @@ public class ApiClientUnitTests
             {
                 RequestUri = new Uri($"{folderContentsEndpoint}?page%5Bnumber%5D=3"),
                 Response =
-                    await new StreamReader(@"ExampleRestApiResponses\FolderContentsResponse.json").ReadToEndAsync(),
+                    await new StreamReader(Path.Combine("ExampleRestApiResponses", "FolderContentsResponse.json")).ReadToEndAsync(),
                 StatusCode = HttpStatusCode.OK
             }
         };
@@ -694,20 +694,20 @@ public class ApiClientUnitTests
             {
                 RequestUri = new Uri("https://developer.api.autodesk.com/authentication/v2/token"),
                 Response =
-                    await new StreamReader(@"ExampleRestApiResponses\AuthenticateResponse.json").ReadToEndAsync(),
+                    await new StreamReader(Path.Combine("ExampleRestApiResponses", "AuthenticateResponse.json")).ReadToEndAsync(),
                 StatusCode = HttpStatusCode.OK
             },
             new()
             {
                 RequestUri = new Uri(folderEndpoint),
-                Response = await new StreamReader(@"ExampleRestApiResponses\FolderResponse.json").ReadToEndAsync(),
+                Response = await new StreamReader(Path.Combine("ExampleRestApiResponses", "FolderResponse.json")).ReadToEndAsync(),
                 StatusCode = HttpStatusCode.OK
             },
             new()
             {
                 RequestUri = new Uri(folderContentsEndpoint),
                 Response =
-                    await new StreamReader(@"ExampleRestApiResponses\FolderContentsResponse.json").ReadToEndAsync(),
+                    await new StreamReader(Path.Combine("ExampleRestApiResponses", "FolderContentsResponse.json")).ReadToEndAsync(),
                 StatusCode = HttpStatusCode.OK
             }
         };
@@ -762,19 +762,19 @@ public class ApiClientUnitTests
             {
                 RequestUri = new Uri("https://developer.api.autodesk.com/authentication/v2/token"),
                 Response =
-                    await new StreamReader(@"ExampleRestApiResponses\AuthenticateResponse.json").ReadToEndAsync(),
+                    await new StreamReader(Path.Combine("ExampleRestApiResponses", "AuthenticateResponse.json")).ReadToEndAsync(),
                 StatusCode = HttpStatusCode.OK
             },
             new()
             {
                 RequestUri = new Uri(folderEndpoint),
-                Response = await new StreamReader(@"ExampleRestApiResponses\FolderResponse.json").ReadToEndAsync(),
+                Response = await new StreamReader(Path.Combine("ExampleRestApiResponses", "FolderResponse.json")).ReadToEndAsync(),
                 StatusCode = HttpStatusCode.OK
             },
             new()
             {
                 RequestUri = new Uri(folderContentsEndpoint),
-                Response = await new StreamReader(@"ExampleRestApiResponses\FolderContentsResponseWithPagination.json")
+                Response = await new StreamReader(Path.Combine("ExampleRestApiResponses", "FolderContentsResponseWithPagination.json"))
                     .ReadToEndAsync(),
                 StatusCode = HttpStatusCode.OK
             },
@@ -782,7 +782,7 @@ public class ApiClientUnitTests
             {
                 RequestUri = new Uri($"{folderContentsEndpoint}?page%5Bnumber%5D=3"),
                 Response =
-                    await new StreamReader(@"ExampleRestApiResponses\FolderContentsResponse.json").ReadToEndAsync(),
+                    await new StreamReader(Path.Combine("ExampleRestApiResponses", "FolderContentsResponse.json")).ReadToEndAsync(),
                 StatusCode = HttpStatusCode.OK
             }
         };
@@ -835,13 +835,13 @@ public class ApiClientUnitTests
             {
                 RequestUri = new Uri("https://developer.api.autodesk.com/authentication/v2/token"),
                 Response =
-                    await new StreamReader(@"ExampleRestApiResponses\AuthenticateResponse.json").ReadToEndAsync(),
+                    await new StreamReader(Path.Combine("ExampleRestApiResponses", "AuthenticateResponse.json")).ReadToEndAsync(),
                 StatusCode = HttpStatusCode.OK
             },
             new()
             {
                 RequestUri = new Uri(projectEndpoint),
-                Response = await new StreamReader(@"ExampleRestApiResponses\ProjectResponse.json").ReadToEndAsync(),
+                Response = await new StreamReader(Path.Combine("ExampleRestApiResponses", "ProjectResponse.json")).ReadToEndAsync(),
                 StatusCode = HttpStatusCode.OK
             }
         };
@@ -891,19 +891,19 @@ public class ApiClientUnitTests
             {
                 RequestUri = new Uri("https://developer.api.autodesk.com/authentication/v2/token"),
                 Response =
-                    await new StreamReader(@"ExampleRestApiResponses\AuthenticateResponse.json").ReadToEndAsync(),
+                    await new StreamReader(Path.Combine("ExampleRestApiResponses", "AuthenticateResponse.json")).ReadToEndAsync(),
                 StatusCode = HttpStatusCode.OK
             },
             new()
             {
                 RequestUri = new Uri(projectEndpoint),
-                Response = await new StreamReader(@"ExampleRestApiResponses\ProjectResponse.json").ReadToEndAsync(),
+                Response = await new StreamReader(Path.Combine("ExampleRestApiResponses", "ProjectResponse.json")).ReadToEndAsync(),
                 StatusCode = HttpStatusCode.OK
             },
             new()
             {
                 RequestUri = new Uri(folderEndpoint),
-                Response = await new StreamReader(@"ExampleRestApiResponses\FolderResponse.json").ReadToEndAsync(),
+                Response = await new StreamReader(Path.Combine("ExampleRestApiResponses", "FolderResponse.json")).ReadToEndAsync(),
                 StatusCode = HttpStatusCode.OK
             }
         };
@@ -951,13 +951,13 @@ public class ApiClientUnitTests
             {
                 RequestUri = new Uri("https://developer.api.autodesk.com/authentication/v2/token"),
                 Response =
-                    await new StreamReader(@"ExampleRestApiResponses\AuthenticateResponse.json").ReadToEndAsync(),
+                    await new StreamReader(Path.Combine("ExampleRestApiResponses", "AuthenticateResponse.json")).ReadToEndAsync(),
                 StatusCode = HttpStatusCode.OK
             },
             new()
             {
                 RequestUri = new Uri(folderEndpoint),
-                Response = await new StreamReader(@"ExampleRestApiResponses\FolderResponseRootFolder.json")
+                Response = await new StreamReader(Path.Combine("ExampleRestApiResponses", "FolderResponseRootFolder.json"))
                     .ReadToEndAsync(),
                 StatusCode = HttpStatusCode.OK
             }
@@ -1012,20 +1012,20 @@ public class ApiClientUnitTests
             {
                 RequestUri = new Uri("https://developer.api.autodesk.com/authentication/v2/token"),
                 Response =
-                    await new StreamReader(@"ExampleRestApiResponses\AuthenticateResponse.json").ReadToEndAsync(),
+                    await new StreamReader(Path.Combine("ExampleRestApiResponses", "AuthenticateResponse.json")).ReadToEndAsync(),
                 StatusCode = HttpStatusCode.OK
             },
             new()
             {
                 RequestUri = new Uri(folderEndpoint),
-                Response = await new StreamReader(@"ExampleRestApiResponses\Recursion_GetFolder_1.json")
+                Response = await new StreamReader(Path.Combine("ExampleRestApiResponses", "Recursion_GetFolder_1.json"))
                     .ReadToEndAsync(),
                 StatusCode = HttpStatusCode.OK
             },
             new()
             {
                 RequestUri = new Uri($"{folderEndpoint}/contents"),
-                Response = await new StreamReader(@"ExampleRestApiResponses\Recursion_GetFolderContents_2.json")
+                Response = await new StreamReader(Path.Combine("ExampleRestApiResponses", "Recursion_GetFolderContents_2.json"))
                     .ReadToEndAsync(),
                 StatusCode = HttpStatusCode.OK
             },
@@ -1034,7 +1034,7 @@ public class ApiClientUnitTests
                 RequestUri =
                     new Uri(
                         $"https://developer.api.autodesk.com/data/v1/projects/{projectId}/folders/urn:adsk.wipprod:fs.folder:co.-Cj9GOznROaMrLBtjvWzdg/contents"),
-                Response = await new StreamReader(@"ExampleRestApiResponses\Recursion_GetFolderContents_3.json")
+                Response = await new StreamReader(Path.Combine("ExampleRestApiResponses", "Recursion_GetFolderContents_3.json"))
                     .ReadToEndAsync(),
                 StatusCode = HttpStatusCode.OK
             },
@@ -1043,7 +1043,7 @@ public class ApiClientUnitTests
                 RequestUri =
                     new Uri(
                         $"https://developer.api.autodesk.com/data/v1/projects/{projectId}/folders/urn:adsk.wipprod:fs.folder:co.qh2HWoteQ9iymYm7DjbYvg/contents"),
-                Response = await new StreamReader(@"ExampleRestApiResponses\Recursion_GetFolderContents_4.json")
+                Response = await new StreamReader(Path.Combine("ExampleRestApiResponses", "Recursion_GetFolderContents_4.json"))
                     .ReadToEndAsync(),
                 StatusCode = HttpStatusCode.OK
             },
@@ -1052,7 +1052,7 @@ public class ApiClientUnitTests
                 RequestUri =
                     new Uri(
                         $"https://developer.api.autodesk.com/data/v1/projects/{projectId}/folders/urn:adsk.wipprod:fs.folder:co.zLe2AszxQjeGgdiSCf49Ug/contents"),
-                Response = await new StreamReader(@"ExampleRestApiResponses\Recursion_GetFolderContents_5.json")
+                Response = await new StreamReader(Path.Combine("ExampleRestApiResponses", "Recursion_GetFolderContents_5.json"))
                     .ReadToEndAsync(),
                 StatusCode = HttpStatusCode.OK
             },
@@ -1061,7 +1061,7 @@ public class ApiClientUnitTests
                 RequestUri =
                     new Uri(
                         $"https://developer.api.autodesk.com/data/v1/projects/{projectId}/folders/urn:adsk.wipprod:fs.folder:co.R86FfZRmS5eB0_cn1TIRUg/contents"),
-                Response = await new StreamReader(@"ExampleRestApiResponses\Recursion_GetFolderContents_6.json")
+                Response = await new StreamReader(Path.Combine("ExampleRestApiResponses", "Recursion_GetFolderContents_6.json"))
                     .ReadToEndAsync(),
                 StatusCode = HttpStatusCode.OK
             }
@@ -1108,20 +1108,20 @@ public class ApiClientUnitTests
             {
                 RequestUri = new Uri("https://developer.api.autodesk.com/authentication/v2/token"),
                 Response =
-                    await new StreamReader(@"ExampleRestApiResponses\AuthenticateResponse.json").ReadToEndAsync(),
+                    await new StreamReader(Path.Combine("ExampleRestApiResponses", "AuthenticateResponse.json")).ReadToEndAsync(),
                 StatusCode = HttpStatusCode.OK
             },
             new()
             {
                 RequestUri = new Uri(folderEndpoint),
-                Response = await new StreamReader(@"ExampleRestApiResponses\Recursion_GetFolder_1.json")
+                Response = await new StreamReader(Path.Combine("ExampleRestApiResponses", "Recursion_GetFolder_1.json"))
                     .ReadToEndAsync(),
                 StatusCode = HttpStatusCode.OK
             },
             new()
             {
                 RequestUri = new Uri($"{folderEndpoint}/contents"),
-                Response = await new StreamReader(@"ExampleRestApiResponses\Recursion_GetFolderContents_2.json")
+                Response = await new StreamReader(Path.Combine("ExampleRestApiResponses", "Recursion_GetFolderContents_2.json"))
                     .ReadToEndAsync(),
                 StatusCode = HttpStatusCode.OK
             }
@@ -1191,20 +1191,20 @@ public class ApiClientUnitTests
             {
                 RequestUri = new Uri("https://developer.api.autodesk.com/authentication/v2/token"),
                 Response =
-                    await new StreamReader(@"ExampleRestApiResponses\AuthenticateResponse.json").ReadToEndAsync(),
+                    await new StreamReader(Path.Combine("ExampleRestApiResponses", "AuthenticateResponse.json")).ReadToEndAsync(),
                 StatusCode = HttpStatusCode.OK
             },
             new()
             {
                 RequestUri = new Uri(folderEndpoint),
-                Response = await new StreamReader(@"ExampleRestApiResponses\Recursion_GetFolder_1.json")
+                Response = await new StreamReader(Path.Combine("ExampleRestApiResponses", "Recursion_GetFolder_1.json"))
                     .ReadToEndAsync(),
                 StatusCode = HttpStatusCode.OK
             },
             new()
             {
                 RequestUri = new Uri($"{folderEndpoint}/contents"),
-                Response = await new StreamReader(@"ExampleRestApiResponses\Recursion_GetFolderContents_2.json")
+                Response = await new StreamReader(Path.Combine("ExampleRestApiResponses", "Recursion_GetFolderContents_2.json"))
                     .ReadToEndAsync(),
                 StatusCode = HttpStatusCode.OK
             }
@@ -1275,20 +1275,20 @@ public class ApiClientUnitTests
             {
                 RequestUri = new Uri("https://developer.api.autodesk.com/authentication/v2/token"),
                 Response =
-                    await new StreamReader(@"ExampleRestApiResponses\AuthenticateResponse.json").ReadToEndAsync(),
+                    await new StreamReader(Path.Combine("ExampleRestApiResponses", "AuthenticateResponse.json")).ReadToEndAsync(),
                 StatusCode = HttpStatusCode.OK
             },
             new()
             {
                 RequestUri = new Uri(folderEndpoint),
-                Response = await new StreamReader(@"ExampleRestApiResponses\Recursion_GetFolder_1.json")
+                Response = await new StreamReader(Path.Combine("ExampleRestApiResponses", "Recursion_GetFolder_1.json"))
                     .ReadToEndAsync(),
                 StatusCode = HttpStatusCode.OK
             },
             new()
             {
                 RequestUri = new Uri($"{folderEndpoint}/contents"),
-                Response = await new StreamReader(@"ExampleRestApiResponses\Recursion_GetFolderContents_2.json")
+                Response = await new StreamReader(Path.Combine("ExampleRestApiResponses", "Recursion_GetFolderContents_2.json"))
                     .ReadToEndAsync(),
                 StatusCode = HttpStatusCode.OK
             }
@@ -1362,20 +1362,20 @@ public class ApiClientUnitTests
             {
                 RequestUri = new Uri("https://developer.api.autodesk.com/authentication/v2/token"),
                 Response =
-                    await new StreamReader(@"ExampleRestApiResponses\AuthenticateResponse.json").ReadToEndAsync(),
+                    await new StreamReader(Path.Combine("ExampleRestApiResponses", "AuthenticateResponse.json")).ReadToEndAsync(),
                 StatusCode = HttpStatusCode.OK
             },
             new()
             {
                 RequestUri = new Uri(folderEndpoint),
-                Response = await new StreamReader(@"ExampleRestApiResponses\Recursion_GetFolder_1.json")
+                Response = await new StreamReader(Path.Combine("ExampleRestApiResponses", "Recursion_GetFolder_1.json"))
                     .ReadToEndAsync(),
                 StatusCode = HttpStatusCode.OK
             },
             new()
             {
                 RequestUri = new Uri($"{folderEndpoint}/contents"),
-                Response = await new StreamReader(@"ExampleRestApiResponses\Recursion_GetFolderContents_2.json")
+                Response = await new StreamReader(Path.Combine("ExampleRestApiResponses", "Recursion_GetFolderContents_2.json"))
                     .ReadToEndAsync(),
                 StatusCode = HttpStatusCode.OK
             }
@@ -1425,20 +1425,20 @@ public class ApiClientUnitTests
             {
                 RequestUri = new Uri("https://developer.api.autodesk.com/authentication/v2/token"),
                 Response =
-                    await new StreamReader(@"ExampleRestApiResponses\AuthenticateResponse.json").ReadToEndAsync(),
+                    await new StreamReader(Path.Combine("ExampleRestApiResponses", "AuthenticateResponse.json")).ReadToEndAsync(),
                 StatusCode = HttpStatusCode.OK
             },
             new()
             {
                 RequestUri = new Uri(folderEndpoint),
-                Response = await new StreamReader(@"ExampleRestApiResponses\Recursion_GetFolder_1.json")
+                Response = await new StreamReader(Path.Combine("ExampleRestApiResponses", "Recursion_GetFolder_1.json"))
                     .ReadToEndAsync(),
                 StatusCode = HttpStatusCode.OK
             },
             new()
             {
                 RequestUri = new Uri($"{folderEndpoint}/contents"),
-                Response = await new StreamReader(@"ExampleRestApiResponses\Recursion_GetFolderContents_2.json")
+                Response = await new StreamReader(Path.Combine("ExampleRestApiResponses", "Recursion_GetFolderContents_2.json"))
                     .ReadToEndAsync(),
                 StatusCode = HttpStatusCode.OK
             },
@@ -1447,7 +1447,7 @@ public class ApiClientUnitTests
                 RequestUri =
                     new Uri(
                         $"https://developer.api.autodesk.com/data/v1/projects/{projectId}/folders/urn:adsk.wipprod:fs.folder:co.-Cj9GOznROaMrLBtjvWzdg/contents"),
-                Response = await new StreamReader(@"ExampleRestApiResponses\Recursion_GetFolderContents_3.json")
+                Response = await new StreamReader(Path.Combine("ExampleRestApiResponses", "Recursion_GetFolderContents_3.json"))
                     .ReadToEndAsync(),
                 StatusCode = HttpStatusCode.OK
             }
