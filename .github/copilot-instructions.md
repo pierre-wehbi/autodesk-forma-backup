@@ -475,6 +475,7 @@ Backup (main entry)
 ApiClient
   ├─ Polly NuGet (retry policy)
   ├─ Newtonsoft.Json NuGet (REST response deserialization)
+  ├─ System.IdentityModel.Tokens.Jwt NuGet (JWT token handling)
   └─ Library.Extensions (FlattenRecursive utility)
 
 Tests
