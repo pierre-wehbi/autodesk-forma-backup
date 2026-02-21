@@ -37,3 +37,4 @@ Desktop.ini
 *.secret.json
 *repomix*.txt
 /.claude
+/.github
