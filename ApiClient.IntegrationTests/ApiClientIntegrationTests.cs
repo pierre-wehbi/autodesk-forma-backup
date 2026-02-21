@@ -24,6 +24,7 @@ public class ApiClientIntegrationTests
     public ApiClientIntegrationTests()
     {
         _configuration = new ConfigurationBuilder()
+            .AddJsonFile("secrets.secret.json", optional: true)
             .AddUserSecrets<ApiClientIntegrationTests>()
             .AddEnvironmentVariables()
             .Build();
